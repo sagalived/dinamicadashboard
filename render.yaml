@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: dinamica-dashboard-financeiro
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NODE_ENV
+        value: production
+      - key: SIENGE_USERNAME
+        sync: false
+      - key: SIENGE_PASSWORD
+        sync: false
+      - key: SIENGE_INSTANCE
+        sync: false
